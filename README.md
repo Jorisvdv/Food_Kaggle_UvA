@@ -2,6 +2,11 @@
 
 The dataset consists of 30612 images for the training set and 7653 images for the test set.
 
+
+Food classification is a challenging problem due to the large number of food categories, since the visual similarity between different food categories is high. 
+
+The goal is to build a model to predict the fine-grained food-category label given an image. This dataset contains 80 food categories indicated with a number.
+
 ## Files
 
     • train_set - the training set with 30612 images
