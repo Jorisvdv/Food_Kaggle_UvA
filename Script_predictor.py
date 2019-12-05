@@ -22,7 +22,9 @@ predict = model.predict_generator(submission_generator)
 # Test if amount of predictions match the number of examples
 print(len(predict) == nb_samples)
 
-prediction_df = pd.DataFrame({"img_name": filenames, "label": predict})
-prediction_df.head()
+prediction_names = pd.DataFrame({"img_name": filenames)
+prediction_labels = pd.DataFrame(predict)
+prediction_df = pd.concat(prediction_names, prediction_labels, axis=1)
+display(prediction_df.head())
 
 prediction_df.to_csv("train_labels.csv")
